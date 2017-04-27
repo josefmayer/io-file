@@ -1,0 +1,68 @@
+
+*** System Information: *** 
+os.arch: amd64
+os.name: Windows 10
+os.version: 10.0
+java.version: 1.8.0_121
+
+
+*** Files Testing: *** 
+file size in bytes
+read time in ns
+write time in ns
+
+file name: text1_10kB
+size: 10016
+read:  14567
+write: 64890
+
+file name: text2_100kB
+size: 100151
+read:  35425
+write: 80781
+
+file name: text3_1MB
+size: 1001523
+read:  515146
+write: 518789
+
+file name: text4_10MB
+size: 10015215
+read:  6612814
+write: 6635990
+
+
+
+*** System Information: *** 
+os.arch: amd64
+os.name: Linux
+os.version: 4.4.0-43-Microsoft
+java.version: 1.8.0_121
+
+
+*** Files Testing: *** 
+file size in bytes
+read time in ns
+write time in ns
+
+file name: text1_10kB
+size: 10016
+read:  40000
+write: 67000
+
+file name: text2_100kB
+size: 100151
+read:  134000
+write: 90000
+
+file name: text3_1MB
+size: 1001523
+read:  1118000
+write: 510000
+
+file name: text4_10MB
+size: 10015215
+read:  12156000
+write: 11740000
+
+

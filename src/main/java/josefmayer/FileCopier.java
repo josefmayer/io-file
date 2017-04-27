@@ -8,11 +8,31 @@ import java.io.IOException;
 
 public class FileCopier {
 
-    public static void main(String args[]) throws Exception {
+    public  void readDirs() throws Exception{
         File inboxDirectory = new File("data/inbox");
         File outboxDirectory = new File("data/outbox");
 
+        File logDirectory = new File("log");
+        File logFile = new File("log/logFile");
+        FileOutputStream out = new FileOutputStream(logFile, true);
+
         outboxDirectory.mkdir();
+        logDirectory.mkdir();
+
+        StringBuffer sb = new StringBuffer();
+        sb.append("\n");
+        sb.append(("*** System Information: *** \n"));
+        sb.append("os.arch: " + System.getProperty("os.arch") + "\n");
+        sb.append("os.name: " + System.getProperty("os.name") + "\n");
+        sb.append("os.version: " + System.getProperty("os.version") + "\n");
+        sb.append("java.version: " + System.getProperty("java.version") + "\n\n\n");
+        sb.append("*** Files Testing: *** \n");
+
+        sb.append("file size in bytes\n");
+        sb.append("read time in ns\n");
+        sb.append("write time in ns\n");
+
+
 
         File[] files = inboxDirectory.listFiles();
 
@@ -22,37 +42,45 @@ public class FileCopier {
                         outboxDirectory.getPath()
                                 + File.separator
                                 + source.getName());
-                copyFile(source, dest);
+                copyFile(source, dest, sb);
             }
         }
+
+        sb.append("\n\n");
+        System.out.println(sb);
+        out.write(sb.toString().getBytes());
+
+
     }
 
 
-    private static void copyFile(File source, File dest) throws IOException {
+    private void copyFile(File source, File dest, StringBuffer sb) throws IOException {
         long startTime, stopTime;
 
         FileOutputStream out = new FileOutputStream(dest);
         byte[] buffer = new byte[(int) source.length()];
         FileInputStream in = new FileInputStream(source);
 
-        System.out.println();
-        System.out.println("file name: " + source.getName());
-        System.out.println("file size in bytes: " + source.length());
+        sb.append("\n");
+        sb.append("file name: " + source.getName() + "\n");
+        sb.append("size: " + source.length() + "\n");
+
         startTime = System.nanoTime();
         in.read(buffer);
         stopTime = System.nanoTime();
-        System.out.println("read  time in ns: " + (stopTime - startTime));
+        sb.append("read:  " + (stopTime - startTime) + "\n");
 
         try {
             startTime = System.nanoTime();
             out.write(buffer);
             stopTime = System.nanoTime();
-            System.out.println("write time in ns: " + (stopTime - startTime));
+            sb.append("write: " + (stopTime - startTime) + "\n");
 
         } finally {
             out.close();
             in.close();
         }
     }
+
 
 }
