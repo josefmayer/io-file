@@ -66,3 +66,36 @@ read:  12156000
 write: 11740000
 
 
+
+*** System Information: ***
+os.arch: amd64
+os.name: Linux
+os.version: 4.8.10-300.fc25.x86_64
+java.version: 1.8.0_131
+
+
+*** Files Testing: ***
+file size in bytes
+read time in ns
+write time in ns
+
+file name: text1_10kB
+size: 10016
+read:  47990
+write: 36044
+
+file name: text4_10MB
+size: 10015215
+read:  6789627
+write: 20622761
+
+file name: text2_100kB
+size: 100151
+read:  67409
+write: 80731
+
+file name: text3_1MB
+size: 1001523
+read:  249800
+write: 652209
+
