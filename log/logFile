@@ -99,3 +99,68 @@ size: 1001523
 read:  249800
 write: 652209
 
+
+*** System Information: *** 
+os.arch: amd64
+os.name: Linux
+os.version: 4.8.0-49-generic
+java.version: 1.8.0_121
+
+
+*** Files Testing: *** 
+file size in bytes
+read time in ns
+write time in ns
+
+file name: text1_10kB
+size: 10016
+read:  69422
+write: 145885
+
+file name: text2_100kB
+size: 100151
+read:  457525
+write: 711577
+
+file name: text3_1MB
+size: 1001523
+read:  3959180
+write: 4092682
+
+file name: text4_10MB
+size: 10015215
+read:  67936459
+write: 41428162
+
+
+*** System Information: *** 
+os.arch: amd64
+os.name: Linux
+os.version: 4.4.0-1013-aws
+java.version: 1.8.0_121
+
+
+*** Files Testing: *** 
+file size in bytes
+read time in ns
+write time in ns
+
+file name: text2_100kB
+size: 100151
+read:  80666
+write: 85772
+
+file name: text1_10kB
+size: 10016
+read:  5055
+write: 13018
+
+file name: text3_1MB
+size: 1001523
+read:  562285
+write: 781481
+
+file name: text4_10MB
+size: 10015215
+read:  5472119
+write: 14981688

@@ -17,7 +17,10 @@ Run program: <br />
 
 
 ### Results
-Results for 3 platforms in logFile: <br />
+Results for 5 platforms in logFile: <br />
 Windows 10 <br />
 Windows Subsystem for Linux (WSL Ubuntu 16.04) <br />
-Linux Fedora 25 Kernel 4.8 <br />
+VirtualBox Linux Fedora 25 Kernel 4.8 <br />
+VirtualBox Linux Ubuntu 6.04 Kernel 4.8 <br />
+AWS Linux Ubuntu 6.04 <br />
+
